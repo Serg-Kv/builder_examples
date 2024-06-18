@@ -1,22 +1,22 @@
 builder.CreateFile("xlsx");
 const oWorksheet = Api.GetActiveSheet();
 
-let numbersArr = [2, 3, 3, 12];
+var numbersArr = [2, 3, 3, 12];
 
 // Place the numbers in cells
-for (let i = 0; i < numbersArr.length; i++) {
+for (var i = 0; i < numbersArr.length; i++) {
   oWorksheet.GetRange("A" + (i + 1)).SetValue(numbersArr[i]);
 }
 
 // Calculate the Hyper-Geometric Distance between the four co-ordinates(numbers)
-let oFunction = Api.GetWorksheetFunction();
+var oFunction = Api.GetWorksheetFunction();
 
 //function parameters
-let sample_s = oWorksheet.GetRange("A1").GetValue();
-let number_sample = oWorksheet.GetRange("A2").GetValue();
-let population_s = oWorksheet.GetRange("A3").GetValue();
-let number_pop = oWorksheet.GetRange("A4").GetValue();
-let dist = oFunction.HYPERGEOMDIST(
+var sample_s = oWorksheet.GetRange("A1").GetValue();
+var number_sample = oWorksheet.GetRange("A2").GetValue();
+var population_s = oWorksheet.GetRange("A3").GetValue();
+var number_pop = oWorksheet.GetRange("A4").GetValue();
+var dist = oFunction.HYPERGEOMDIST(
   sample_s,
   number_sample,
   population_s,
