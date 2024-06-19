@@ -17,10 +17,10 @@ var cummulative = true;
 
 //invoke LOGNORM.DIST method
 var oFunction = Api.GetWorksheetFunction();
-var ans = oFunction.LOGNORM.DIST(xValue, mean, standardDeviation, cummulative);
+var ans = oFunction.LOGNORM_DIST(xValue, mean, standardDeviation, cummulative);
 
 //print answer
 oWorksheet.GetRange("C1").SetValue(ans);
 
-builder.SaveFile("xlsx", "LOGNORMDIST.xlsx");
+builder.SaveFile("xlsx", "LOGNORM_DIST.xlsx");
 builder.CloseFile();
