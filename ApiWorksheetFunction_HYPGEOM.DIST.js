@@ -18,7 +18,7 @@ var number_sample = oWorksheet.GetRange("A2").GetValue();
 var population_s = oWorksheet.GetRange("A3").GetValue();
 var number_pop = oWorksheet.GetRange("A4").GetValue();
 var cumulative = True;
-var dist = oFunction.HYPERGEOM.DIST(
+var dist = oFunction.HYPERGEOM_DIST(
   sample_s,
   number_sample,
   population_s,
@@ -26,5 +26,5 @@ var dist = oFunction.HYPERGEOM.DIST(
   cumulative
 );
 oWorksheet.GetRange("C4").SetValue(dist);
-builder.SaveFile("xlsx", "HYPGEOM.DIST.xlsx");
+builder.SaveFile("xlsx", "HYPGEOM_DIST.xlsx");
 builder.CloseFile(); 
