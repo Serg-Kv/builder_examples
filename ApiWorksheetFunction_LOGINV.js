@@ -5,7 +5,7 @@ const oWorksheet = Api.GetActiveSheet();
 var numbersArr = [0.5, 4, 7];
 
 //set values in cells
-for (var i = 0; i < yValues.length; i++) {
+for (var i = 0; i < numbersArr.length; i++) {
   oWorksheet.GetRange("A" + (i + 1)).SetValue(numbersArr[i]);
 }
 
