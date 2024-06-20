@@ -1,7 +1,7 @@
 builder.CreateFile("xlsx");
 const oWorksheet = Api.GetActiveSheet();
 
-//MAXA takes all values (bool, string, number)
+//MAXA doesnt ignore lgical values and text
 var valueArr = [23, 45, true, "text", 0.89];
 // // Place the numbers in cells
 for (var i = 0; i < valueArr.length; i++) {
