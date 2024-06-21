@@ -15,9 +15,9 @@ var probabilityS = oWorksheet.GetRange("A3").GetValue();
 var cumulative = oWorksheet.GetRange("A4").GetValue();
 
 var oFunction = Api.GetWorksheetFunction();
-var ans = oFunction.NEGBINOMDIST(numberF, numberS, probabilityS, cumulative);
+var ans = oFunction.NEGBINOM_DIST(numberF, numberS, probabilityS, cumulative);
 
 oWorksheet.GetRange("C1").SetValue(ans);
 
-builder.SaveFile("xlsx", "NEGBINOMDIST.xlsx");
+builder.SaveFile("xlsx", "NEGBINOM_DIST.xlsx");
 builder.CloseFile();
