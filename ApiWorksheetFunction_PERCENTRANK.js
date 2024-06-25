@@ -14,7 +14,7 @@ var x = 2;
 var significance = 4;
 
 var oFunction = Api.GetWorksheetFunction();
-var ans = oFunction.PERCENTRANK(inputValArray, x);
+var ans = oFunction.PERCENTRANK(inputValArray, x, significance);
 
 oWorksheet.GetRange("C1").SetValue(ans);
 
