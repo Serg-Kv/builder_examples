@@ -13,9 +13,9 @@ var inputValArray = oWorksheet.GetRange("A1:A16").GetValue();
 var k = 0.5;
 
 var oFunction = Api.GetWorksheetFunction();
-var ans = oFunction.PERCENTILE_EXEC(inputValArray, k);
+var ans = oFunction.PERCENTILE_EXC(inputValArray, k);
 
 oWorksheet.GetRange("C1").SetValue(ans);
 
-builder.SaveFile("xlsx", "PERCENTILE_EXEC.xlsx");
+builder.SaveFile("xlsx", "PERCENTILE_EXC.xlsx");
 builder.CloseFile();
