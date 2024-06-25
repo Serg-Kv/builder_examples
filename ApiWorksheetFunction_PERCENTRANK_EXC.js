@@ -14,7 +14,7 @@ var x = 2;
 var significance = 4;
 
 var oFunction = Api.GetWorksheetFunction();
-var ans = oFunction.PERCENTRANK_EXC(inputValArray, x); // (0...1) inclusive dataset
+var ans = oFunction.PERCENTRANK_EXC(inputValArray, x, significance); // (0...1) exclusive dataset
 
 oWorksheet.GetRange("C1").SetValue(ans);
 
