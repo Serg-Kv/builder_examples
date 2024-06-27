@@ -18,13 +18,8 @@ for (var i = 0; i < valueArr2.length; i++) {
 var xRange = oWorksheet.GetRange("A1:A4");
 var probRange = oWorksheet.GetRange("B1:B4");
 
-var oFunction = Api.GetWorksheetFunction(
-  xRange,
-  probRange,
-  lowerLimit,
-  upperLimit
-);
-var ans = oFunction.PROB();
+var oFunction = Api.GetWorksheetFunction();
+var ans = oFunction.PROB(xRange, probRange, lowerLimit, upperLimit);
 
 oWorksheet.GetRange("D1").SetValue(ans);
 
