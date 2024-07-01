@@ -1,10 +1,7 @@
 builder.CreateFile("xlsx");
 const oWorksheet = Api.GetActiveSheet();
 
-// Place the numbers in cells
-for (var i = 0; i < valueArr.length; i++) {
-  oWorksheet.GetRange("A1").SetValue(12);
-}
+oWorksheet.GetRange("A1").SetValue(12);
 
 // logcial statements
 // statement1 = A1 < 100
